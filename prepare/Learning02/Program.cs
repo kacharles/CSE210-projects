@@ -2,8 +2,15 @@ using System;
 
 class Program
 {
+    
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Learning02 World!");
+       Resume rs = new Resume();
+       Job jb = new Job();
+       Journal jl = new Journal(); 
+       PromptGenerator pg = new PromptGenerator(); 
+       
+
+
     }
 }
