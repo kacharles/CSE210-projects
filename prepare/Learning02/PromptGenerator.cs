@@ -11,10 +11,10 @@ public class PromptGenerator {
     "What was the most memorable thing you did today?", 
   }; 
 
-  public static Random random = new Random(); 
+  public static Random _random = new Random(); 
   
   public string DisplayPrompt() { 
-      int _randomIndex = random.Next(0, _prompts.Count); 
+      int _randomIndex = _random.Next(0, _prompts.Count); 
       string _randomPrompt = _prompts[_randomIndex];
       return _randomPrompt; 
   }
