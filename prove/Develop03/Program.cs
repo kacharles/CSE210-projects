@@ -41,11 +41,12 @@ class Program
 
         // a while loop to hide a word and replace it with an underscore 
         // and display the word 
-        
+
         while(ctrInput != "quit") {
           s.HideRandomWords(0);
         Console.WriteLine(s.GetDisplayText());
         ctrInput = Console.ReadLine(); 
+        // Console.Clear(); 
         }
          
     }
