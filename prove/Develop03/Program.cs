@@ -27,14 +27,21 @@ class Program
         Console.WriteLine("Enter the text: "); 
         text = Console.ReadLine();
 
-
+        Reference r; 
         //Instanciate a new reference and pass the user input
-        Reference r = new Reference(book, chapter, startVerse);
+        if (endVerse == 0) {
+          r = new Reference(book, chapter, startVerse);
+        }
+        else { 
+          r = new Reference(book, chapter, startVerse, endVerse);
+        }
+        
         // string words = "if my people who are called by my name"; 
+        Scripture s = new Scripture(r, text);
+
 
         //Instanciate a new Scripture and pass the reference object and the 
         //text enter by the user; 
-        Scripture s = new Scripture(r, text); 
         
         // A userput to control the random words being replace by dash or stroke
         string ctrInput = ""; 
@@ -43,10 +50,10 @@ class Program
         // and display the word 
 
         while(ctrInput != "quit") {
-          s.HideRandomWords(0);
-        Console.WriteLine(s.GetDisplayText());
-        ctrInput = Console.ReadLine(); 
-        // Console.Clear(); 
+        Console.WriteLine(s.GetDisplayText()); 
+        ctrInput = Console.ReadLine();
+        s.HideRandomWords(); 
+        Console.Clear(); 
         }
          
     }

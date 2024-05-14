@@ -22,12 +22,12 @@ public class Scripture {
 
     }
     // A function that hide random words in the List of words
-    public void HideRandomWords(int numberToHide) {
+    public void HideRandomWords() {
 
         // while (numberToHide + 1 >= 0) {
         //    generate a random number
         Random random = new Random();
-        int getRandom = random.Next(0, _words.Count());
+        int getRandom = random.Next(_words.Count());
 
         Word hidden = _words[getRandom];
         hidden.Hide();
