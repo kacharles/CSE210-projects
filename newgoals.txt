@@ -1,0 +1,3 @@
+0
+SimpleGoal:,sp,create new sp,50,False0
+Eternal Goal:,ep,create a new ep,50,

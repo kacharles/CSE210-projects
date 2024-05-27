@@ -21,6 +21,6 @@ public class Entry {
    
    public string GetEntry() { 
         return ($"Date: {_date} - Prompt: {_promptText}\n{_entryText}");
-        // return ($"Date: {_date} - Prompt: {_promptText}\n" + "{_entryText}");
+        // return ($"Date: {_date} - Prompt: {_promptText}\n" +"Response: {_entryText}");
    }
 }

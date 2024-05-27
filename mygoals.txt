@@ -1,0 +1,4 @@
+SimpleGoal:,sp,new sp,50,False
+EternalGoal:,ep,create new ep,500
+SimpleGoal:,spg,create new spg,50,False
+EternalGoal:,etg,create new etg,50

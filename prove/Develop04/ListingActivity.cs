@@ -58,6 +58,15 @@ public class ListingActivity:Activity {
         Random random = new Random(); 
         int randomIndex = random.Next(_prompts.Count());
         string randomPrompt = _prompts[randomIndex]; 
+
+        for(int i = 0; i<_prompts.Count(); i++) { 
+            if(randomPrompt == _prompts[i]) {
+                _prompts.Remove(randomPrompt);
+            }
+            if (i >= _prompts.Count()) {
+                i = 0;
+            }
+        }
         return randomPrompt; 
 
     }

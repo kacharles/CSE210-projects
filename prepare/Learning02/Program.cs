@@ -10,7 +10,6 @@ class Program
     public void DisplayMenu() { 
         Console.WriteLine("Please select one of the following:\n "); 
         Console.WriteLine("1. Write\n2. Display\n3. Save\n4. Load\n5. Quit"); 
-        Console.Clear(); 
         Console.WriteLine("Program Continues..."); 
     }
     static void Main(string[] args)
@@ -24,7 +23,7 @@ class Program
         
         // string filename; 
         
-         
+        
 
         while (userInput != 5) {
             p.DisplayMenu(); 
@@ -66,9 +65,6 @@ class Program
             Console.WriteLine("Thank you writing to your journal today!");
         }
         
-
-        
-
         
         // userInput = int.Parse(Console.ReadLine()); 
         // Console.WriteLine("Welcome to the program..");

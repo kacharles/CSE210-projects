@@ -22,6 +22,8 @@ public class ReflectingActivity:Activity  {
         "How can you keep this experience in mind in the future?"
         
     }; 
+    List<string> _newQuestion = new List<string>();
+    List<string> _newPrompt = new List<string>();
 
     Random r;
 
@@ -43,13 +45,14 @@ public class ReflectingActivity:Activity  {
 
         //Call the spinner method to give the user time to prepare
         ShowSpinner(5); 
-        Console.WriteLine("Consider the following prompt:\n");
-        Console.WriteLine($"--- {GetRandomPrompt()} ---");
+        
         DateTime startTime = DateTime.Now; 
         DateTime stopTime = startTime.AddSeconds(_duration);
 
         //The user is being prompted to carryout the breathing exercise
         do { 
+            Console.WriteLine("Consider the following prompt:\n");
+            Console.WriteLine($"--- {GetRandomPrompt()} ---");
             Console.WriteLine("When you have something in mind, press enter to continue.");
             Console.ReadLine(); 
             Console.WriteLine("Now ponder on each of the following questions as they related to this experience.");
@@ -85,7 +88,11 @@ public class ReflectingActivity:Activity  {
 
             if(getRandomPromt == _prompt[i]) { 
                 _prompt.Remove(getRandomPromt);
-                return getRandomPromt;
+                _newPrompt.Add(getRandomPromt);
+            }
+            if(i >= _prompt.Count()) { 
+                i = 0;
+                _newPrompt = _prompt;
             }
         }
         return getRandomPromt;
@@ -98,7 +105,11 @@ public class ReflectingActivity:Activity  {
         for (int i = 0; i<_question.Count; i++) { 
             if(getRandomQuestion == _question[i]) { 
                 _question.Remove(getRandomQuestion);
-                return getRandomQuestion;
+                _newQuestion.Add(getRandomQuestion);
+            }
+            if(i>=_question.Count()) { 
+                i = 0;
+                _newQuestion = _question;
             }
         }
         return getRandomQuestion; 
