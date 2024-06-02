@@ -5,7 +5,6 @@ public class Order {
     private List<Product> _products;
     private Customer _customer; 
 
-    private List<string> _packLBL = new List<string>();
     private string _shippingLBL;
     private int _totalCost; 
     private int _shippingCost; 
@@ -50,10 +49,6 @@ public class Order {
         _shippingLBL = ($"{_customer.GetCustomerAddress()}");
     
         return _shippingLBL;
-    }
-
-    public List<Product> GetProducts() { 
-        return _products;
     }
 
     //Return today and complete this assignment.

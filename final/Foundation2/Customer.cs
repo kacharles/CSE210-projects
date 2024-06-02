@@ -8,10 +8,6 @@ public class Customer {
         _address = address; 
     }
 
-    public Customer() { 
-
-    }
-
     public bool IsAddressAmerica() { 
 
         if(_address.IsAmerica() == true) {
